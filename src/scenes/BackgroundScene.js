@@ -5,7 +5,7 @@ import { AssetLoader } from '../utils/AssetLoader';
 import { Background } from '../components/Background';
 import { CharacterManager } from '../game/CharacterManager';
 
-export class ExampleBackgroundScene extends Scene {
+export class BackgroundScene extends Scene {
     constructor(app) {
         super();
         this.app = app;
@@ -16,8 +16,8 @@ export class ExampleBackgroundScene extends Scene {
 
     preload(onComplete) {
         const assets = [
-            { name: 'bg', url: 'assets/spritesheets/background.json' },
-            { name: 'character', url: 'assets/spritesheets/character.json' }
+            { name: 'bg', url: 'src/assets/background.json' },
+            { name: 'character', url: 'src/assets/spritesheets/character.json' }
         ];
         
         this.assetLoader.loadAssets(assets, () => {
@@ -39,7 +39,7 @@ export class ExampleBackgroundScene extends Scene {
         // 2. Use a specific background texture from the JSON
         if (bgSpritesheet && bgSpritesheet.textures) {
             // Available backgrounds from background.json: castle_bg, forest_bg, mountain_bg
-            const castleTexture = bgSpritesheet.textures['castle_bg'];
+            const castleTexture = bgSpritesheet.textures['castleSmallAlt'];
             
             if (castleTexture) {
                 this.background.setTexture(castleTexture);
