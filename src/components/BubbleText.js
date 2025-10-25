@@ -1,169 +1,160 @@
 import * as PIXI from 'pixi.js';
-import { gsap } from 'gsap';
 
-export class BubbleText {
-    constructor() {
+export class Background {
+    constructor(options = {}) {
         this.container = new PIXI.Container();
-        this.bubble = null;
-        this.text = null;
-        this.isVisible = false;
-        this.hideTimeout = null;
+        this.graphics = new PIXI.Graphics();
+        this.sprite = null;
+        
+        // Default properties
+        this.color = options.color !== undefined ? options.color : 0x1099bb;
+        this.texture = options.texture || null;
+        this.width = options.width || 800;
+        this.height = options.height || 600;
+        
+        this.container.addChild(this.graphics);
+        this.render();
     }
 
     addTo(stage) {
         if (stage && !stage.children.includes(this.container)) {
-            stage.addChild(this.container);
+            stage.addChildAt(this.container, 0); // Add at bottom layer
         }
     }
 
-    show(message, position, duration = 2) {
-        // Clear any existing timeout
-        if (this.hideTimeout) {
-            clearTimeout(this.hideTimeout);
-            this.hideTimeout = null;
+    removeFrom(stage) {
+        if (stage && stage.children.includes(this.container)) {
+            stage.removeChild(this.container);
+        }
+    }
+
+    setColor(color) {
+        this.color = color;
+        this.texture = null; // Clear texture when setting color
+        this.render();
+    }
+
+    setTexture(texture) {
+        this.texture = texture;
+        this.render();
+    }
+
+    resize(width, height) {
+        this.width = width;
+        this.height = height;
+        this.render();
+    }
+
+    render() {
+        // Clear previous content
+        this.graphics.clear();
+        
+        if (this.sprite) {
+            this.container.removeChild(this.sprite);
+            this.sprite = null;
         }
 
-        // Create or update text
-        if (!this.text) {
-            this.text = new PIXI.Text({
-                text: message,
-                style: {
-                    fontFamily: 'Arial',
-                    fontSize: 16,
-                    fill: 0x000000,
-                    align: 'center',
-                    wordWrap: true,
-                    wordWrapWidth: 200
+        if (this.texture) {
+            // Use texture/sprite
+            this.sprite = new PIXI.Sprite(this.texture);
+            this.sprite.width = this.width;
+            this.sprite.height = this.height;
+            this.container.addChild(this.sprite);
+        } else {
+            // Use solid color
+            this.graphics.rect(0, 0, this.width, this.height);
+            this.graphics.fill(this.color);
+        }
+    }
+
+    // Gradient background support
+    setGradient(topColor, bottomColor) {
+        this.graphics.clear();
+        
+        if (this.sprite) {
+            this.container.removeChild(this.sprite);
+            this.sprite = null;
+        }
+
+        // Create a simple vertical gradient using multiple rectangles
+        const steps = 100;
+        const stepHeight = this.height / steps;
+        
+        for (let i = 0; i < steps; i++) {
+            const ratio = i / (steps - 1);
+            const r = Math.round((1 - ratio) * ((topColor >> 16) & 0xFF) + ratio * ((bottomColor >> 16) & 0xFF));
+            const g = Math.round((1 - ratio) * ((topColor >> 8) & 0xFF) + ratio * ((bottomColor >> 8) & 0xFF));
+            const b = Math.round((1 - ratio) * (topColor & 0xFF) + ratio * (bottomColor & 0xFF));
+            
+            const color = (r << 16) | (g << 8) | b;
+            
+            this.graphics.rect(0, i * stepHeight, this.width, stepHeight);
+            this.graphics.fill(color);
+        }
+    }
+
+    // Pattern/tiled background support
+    setPattern(texture, scaleX = 1, scaleY = 1) {
+        this.graphics.clear();
+        
+        if (this.sprite) {
+            this.container.removeChild(this.sprite);
+            this.sprite = null;
+        }
+
+        if (!texture) return;
+
+        const tiledSprite = new PIXI.TilingSprite({
+            texture: texture,
+            width: this.width,
+            height: this.height
+        });
+        
+        tiledSprite.tileScale.set(scaleX, scaleY);
+        this.sprite = tiledSprite;
+        this.container.addChild(this.sprite);
+    }
+
+    // Animation support
+    scrollTexture(speedX = 0, speedY = 0) {
+        if (this.sprite && this.sprite instanceof PIXI.TilingSprite) {
+            return {
+                update: (delta) => {
+                    this.sprite.tilePosition.x += speedX * delta;
+                    this.sprite.tilePosition.y += speedY * delta;
                 }
-            });
-            this.container.addChild(this.text);
-        } else {
-            this.text.text = message;
+            };
         }
-
-        // Create or update bubble background
-        if (!this.bubble) {
-            this.bubble = new PIXI.Graphics();
-            this.container.addChildAt(this.bubble, 0); // Add behind text
-        }
-
-        // Clear and redraw bubble
-        this.bubble.clear();
-        
-        // Calculate bubble dimensions based on text
-        const textBounds = this.text.getBounds();
-        const padding = 12;
-        const bubbleWidth = textBounds.width + padding * 2;
-        const bubbleHeight = textBounds.height + padding * 2;
-        const cornerRadius = 8;
-
-        // Draw bubble background
-        this.bubble.roundRect(0, 0, bubbleWidth, bubbleHeight, cornerRadius);
-        this.bubble.fill(0xFFFFFF);
-        this.bubble.stroke({ color: 0x000000, width: 2 });
-
-        // Draw speech bubble tail
-        const tailSize = 8;
-        const tailX = bubbleWidth / 2;
-        const tailY = bubbleHeight;
-        
-        this.bubble.moveTo(tailX - tailSize, tailY);
-        this.bubble.lineTo(tailX, tailY + tailSize);
-        this.bubble.lineTo(tailX + tailSize, tailY);
-        this.bubble.fill(0xFFFFFF);
-        this.bubble.stroke({ color: 0x000000, width: 2 });
-
-        // Position text within bubble
-        this.text.x = padding;
-        this.text.y = padding;
-
-        // Position bubble above character
-        this.container.x = position.x - bubbleWidth / 2;
-        this.container.y = position.y - bubbleHeight - tailSize - 20; // 20px offset above character
-
-        // Show with animation
-        if (!this.isVisible) {
-            this.container.alpha = 0;
-            this.container.scale.set(0.8);
-            this.isVisible = true;
-
-            gsap.to(this.container, {
-                alpha: 1,
-                duration: 0.3,
-                ease: "back.out(1.7)"
-            });
-            gsap.to(this.container.scale, {
-                x: 1,
-                y: 1,
-                duration: 0.3,
-                ease: "back.out(1.7)"
-            });
-        } else {
-            // Just update position if already visible
-            gsap.to(this.container, {
-                x: position.x - bubbleWidth / 2,
-                y: position.y - bubbleHeight - tailSize - 20,
-                duration: 0.2
-            });
-        }
-
-        // Auto-hide after duration
-        if (duration > 0) {
-            this.hideTimeout = setTimeout(() => {
-                this.hide();
-            }, duration * 1000);
-        }
+        return null;
     }
 
-    hide() {
-        if (!this.isVisible) return;
-
-        // Clear timeout if exists
-        if (this.hideTimeout) {
-            clearTimeout(this.hideTimeout);
-            this.hideTimeout = null;
-        }
-
-        gsap.to(this.container, {
-            alpha: 0,
-            duration: 0.2,
-            ease: "power2.out",
-            onComplete: () => {
-                this.isVisible = false;
-                this.container.scale.set(0.8);
-            }
-        });
-        gsap.to(this.container.scale, {
-            x: 0.8,
-            y: 0.8,
-            duration: 0.2,
-            ease: "power2.out"
-        });
+    // Parallax layers support
+    addParallaxLayer(texture, speed = 1, depth = 1) {
+        const layer = new PIXI.Sprite(texture);
+        layer.width = this.width;
+        layer.height = this.height;
+        layer.alpha = 0.7 / depth; // Farther layers are more transparent
+        
+        const layerData = {
+            sprite: layer,
+            speed: speed,
+            depth: depth,
+            originalX: 0
+        };
+        
+        this.container.addChild(layer);
+        return layerData;
     }
 
     destroy() {
-        if (this.hideTimeout) {
-            clearTimeout(this.hideTimeout);
+        if (this.graphics) {
+            this.graphics.destroy();
         }
-        this.container.destroy(true);
-    }
-
-    // Update position if character moves while bubble is visible
-    updatePosition(position) {
-        if (!this.isVisible) return;
-
-        const textBounds = this.text?.getBounds();
-        if (!textBounds) return;
-
-        const padding = 12;
-        const bubbleWidth = textBounds.width + padding * 2;
-        const bubbleHeight = textBounds.height + padding * 2;
-        const tailSize = 8;
-
-        gsap.to(this.container, {
-            x: position.x - bubbleWidth / 2,
-            y: position.y - bubbleHeight - tailSize - 20,
-            duration: 0.1
-        });
+        if (this.sprite) {
+            this.sprite.destroy();
+        }
+        if (this.container) {
+            this.container.destroy(true);
+        }
     }
 }
