@@ -22,7 +22,9 @@ export class CharacterManager {
         };
 
         // Create new character with enhanced options
-        const character = new Character(spritesheet, position, options);
+        // Merge position into options for simple graphics mode
+        const characterOptions = { ...options, ...position };
+        const character = new Character(spritesheet, position, characterOptions);
         character.id = id;
 
         // Apply legacy options for backward compatibility
