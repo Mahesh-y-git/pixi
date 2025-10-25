@@ -1,122 +1,287 @@
-import * as PIXI from 'pixi.js';
-import { Scene } from './Scene';
 import { gsap } from 'gsap';
-import { AssetLoader } from '../utils/AssetLoader';
-import { Background } from '../components/Background';
-import { CharacterManager } from '../game/CharacterManager';
-import { Cutscene } from '../utils/Cutscene';
 
-export class CutsceneScene extends Scene {
-    constructor(app, options = {}) {
-        super();
-        this.app = app;
-        this.assetLoader = new AssetLoader();
-        this.background = new Background({ color: options.bgColor || 0x000000 });
-        this.characters = new CharacterManager(this.container);
-        this.cutscene = null;
+export class Cutscene {
+    constructor(options = {}) {
+        this.timeline = gsap.timeline({ paused: true });
+        this.onComplete = options.onComplete || null;
+        if (this.onComplete) this.timeline.eventCallback('onComplete', this.onComplete);
     }
 
-    preload(onComplete) {
-        const assets = [
-            { name: 'knight', url: 'assets/spritesheets/knight.json' },
-            { name: 'princess', url: 'assets/spritesheets/princess.json' },
-            { name: 'dragon', url: 'assets/spritesheets/dragon.json' },
-            { name: 'bg', url: 'assets/spritesheets/background.json' }
-        ];
-        this.assetLoader.loadAssets(assets, () => {
-            this.onAssetsLoaded();
-            onComplete && onComplete();
-        });
+    wait(seconds) {
+        this.timeline.to({}, { duration: seconds });
+        return this;
     }
 
-    onAssetsLoaded() {
-        // add background
-        this.background.addTo(this.container);
-        this.background.resize(this.app.screen.width, this.app.screen.height);
-        const bgTex = this.assetLoader.getSpriteSheet('bg');
-        if (bgTex && bgTex.textures && Object.keys(bgTex.textures).length) {
-            // if background is stored as a texture or spritesheet, try to use one
-            const texKeys = Object.keys(bgTex.textures);
-            const t = bgTex.textures[texKeys[0]];
-            this.background.setTexture(t);
+    move(character, position, duration = 1, ease = 'power1.inOut') {
+        if (!character || !character.sprite) return this;
+        
+        // Use the enhanced character movement system if available
+        if (typeof character.moveTo === 'function') {
+            // Use character's enhanced moveTo method which handles walk animation and direction
+            this.timeline.add(() => {
+                const targetPosition = {
+                    x: position.x,
+                    y: position.y,
+                    groundY: position.groundY || position.y
+                };
+                character.moveTo(targetPosition, duration, 'walk');
+            });
+        } else {
+            // Fallback to direct sprite position animation
+            // Calculate direction for sprite flipping if character has setDirection method
+            if (typeof character.setDirection === 'function') {
+                const deltaX = position.x - character.sprite.x;
+                if (Math.abs(deltaX) > 5) {
+                    this.timeline.add(() => {
+                        character.setDirection(deltaX > 0 ? 'right' : 'left');
+                    });
+                }
+            }
+            
+            // Play walk animation if available
+            if (typeof character.playAnimation === 'function') {
+                this.timeline.add(() => {
+                    character.playAnimation('walk');
+                });
+            }
+            
+            // Animate the position
+            this.timeline.to(character.sprite.position, { 
+                x: position.x, 
+                y: position.y, 
+                duration, 
+                ease,
+                onComplete: () => {
+                    // Return to idle animation after movement
+                    if (typeof character.playAnimation === 'function') {
+                        character.playAnimation('idle');
+                    }
+                }
+            });
         }
-
-        // create characters
-        const knightSS = this.assetLoader.getSpriteSheet('knight');
-        const princessSS = this.assetLoader.getSpriteSheet('princess');
-        const dragonSS = this.assetLoader.getSpriteSheet('dragon');
-
-        const w = this.app.screen.width;
-        const h = this.app.screen.height;
-
-        const knight = this.characters.addCharacter('knight', knightSS, { x: -100, y: h * 0.6 });
-        const princess = this.characters.addCharacter('princess', princessSS, { x: w * 0.2, y: h * 0.6 });
-        const dragon = this.characters.addCharacter('dragon', dragonSS, { x: w + 200, y: h * 0.35 });
-
-        // small tweaks
-        knight.sprite.scale.set(1.2);
-        princess.sprite.scale.set(1.0);
-        dragon.sprite.scale.set(1.6);
-
-        // prepare a cutscene timeline
-        this.cutscene = new Cutscene({ onComplete: () => console.log('Cutscene finished') });
-
-        // intro title
-        const title = new PIXI.Text('The Dragon of Aralore', { fontFamily: 'Serif', fontSize: 48, fill: 0xffffff, align: 'center' });
-        title.anchor.set(0.5);
-        title.x = w / 2; title.y = h * 0.2;
-        title.alpha = 0;
-        this.container.addChild(title);
-
-        this.cutscene.timeline.to(title, { alpha: 1, duration: 1 });
-        this.cutscene.wait(1);
-        this.cutscene.timeline.to(title, { alpha: 0, duration: 1 });
-
-        // characters enter
-        this.cutscene.move(knight, { x: w * 0.35, y: h * 0.6 }, 2);
-        this.cutscene.move(dragon, { x: w * 0.75, y: h * 0.35 }, 2);
-        this.cutscene.wait(0.5);
-        this.cutscene.call(() => {
-            princess.playAnimation('idle');
-            knight.playAnimation('idle');
-            dragon.playAnimation('idle');
-        });
-
-        // small exchange
-        this.cutscene.speak(princess, "Sir Knight! Beware the dragon!", 3);
-        this.cutscene.wait(0.5);
-        this.cutscene.speak(knight, "I will protect you!", 2);
-
-        // the fight: knight moves to dragon, dragon breathes (scale/pulse), knight attack
-        this.cutscene.move(knight, { x: w * 0.6, y: h * 0.55 }, 1.5);
-        this.cutscene.animate(knight, 'attack');
-        this.cutscene.wait(0.5);
-        this.cutscene.animate(dragon, 'roar');
-
-        // final: dragon staggers and exits
-        this.cutscene.call(() => {
-            // simple tween on dragon to simulate hit reaction
-            gsap.to(dragon.sprite.scale, { x: 1.2, y: 1.2, duration: 0.2, yoyo: true, repeat: 3 });
-        });
-        this.cutscene.move(dragon, { x: w + 300, y: h * 0.35 }, 2);
-
-        // close
-        this.cutscene.wait(1);
-        this.cutscene.call(() => {
-            const end = new PIXI.Text('To be continued...', { fontFamily: 'Serif', fontSize: 36, fill: 0xffffff });
-            end.anchor.set(0.5);
-            end.x = w / 2; end.y = h * 0.5;
-            end.alpha = 0;
-            this.container.addChild(end);
-            gsap.to(end, { alpha: 1, duration: 1 });
-        });
-
-        // start the cutscene
-        this.cutscene.play();
+        
+        return this;
     }
 
-    update(delta) {
-        // update characters
-        this.characters.update(delta);
+    // Enhanced movement methods
+    walkTo(character, position, duration = 1, ease = 'power1.inOut') {
+        return this.move(character, position, duration, ease);
+    }
+
+    runTo(character, position, duration = 0.6, ease = 'power2.out') {
+        if (!character || !character.sprite) return this;
+        
+        if (typeof character.runTo === 'function') {
+            this.timeline.add(() => {
+                const targetPosition = {
+                    x: position.x,
+                    y: position.y,
+                    groundY: position.groundY || position.y
+                };
+                character.runTo(targetPosition, duration);
+            });
+        } else {
+            // Fallback with run animation
+            if (typeof character.setDirection === 'function') {
+                const deltaX = position.x - character.sprite.x;
+                if (Math.abs(deltaX) > 5) {
+                    this.timeline.add(() => {
+                        character.setDirection(deltaX > 0 ? 'right' : 'left');
+                    });
+                }
+            }
+            
+            if (typeof character.playAnimation === 'function') {
+                this.timeline.add(() => {
+                    character.playAnimation('run');
+                });
+            }
+            
+            this.timeline.to(character.sprite.position, { 
+                x: position.x, 
+                y: position.y, 
+                duration, 
+                ease,
+                onComplete: () => {
+                    if (typeof character.playAnimation === 'function') {
+                        character.playAnimation('idle');
+                    }
+                }
+            });
+        }
+        
+        return this;
+    }
+
+    jumpTo(character, position, height = null, duration = 0.8) {
+        if (!character || !character.sprite) return this;
+        
+        if (typeof character.jumpTo === 'function') {
+            this.timeline.add(() => {
+                const targetPosition = {
+                    x: position.x,
+                    y: position.y,
+                    groundY: position.groundY || position.y
+                };
+                character.jumpTo(targetPosition, height);
+            });
+        } else {
+            // Fallback jump animation
+            if (typeof character.setDirection === 'function') {
+                const deltaX = position.x - character.sprite.x;
+                if (Math.abs(deltaX) > 5) {
+                    this.timeline.add(() => {
+                        character.setDirection(deltaX > 0 ? 'right' : 'left');
+                    });
+                }
+            }
+            
+            if (typeof character.playAnimation === 'function') {
+                this.timeline.add(() => {
+                    character.playAnimation('jump');
+                });
+            }
+            
+            const jumpHeight = height || 80;
+            const currentY = character.sprite.y;
+            const targetY = position.y;
+            
+            // Create jump arc
+            this.timeline.to(character.sprite.position, {
+                x: position.x,
+                duration: duration,
+                ease: 'power2.out'
+            });
+            
+            this.timeline.to(character.sprite.position, {
+                y: currentY - jumpHeight,
+                duration: duration / 2,
+                ease: 'power2.out'
+            }, '-=' + duration);
+            
+            this.timeline.to(character.sprite.position, {
+                y: targetY,
+                duration: duration / 2,
+                ease: 'power2.in',
+                onComplete: () => {
+                    if (typeof character.playAnimation === 'function') {
+                        character.playAnimation('idle');
+                    }
+                }
+            });
+        }
+        
+        return this;
+    }
+
+    // Face direction without moving
+    faceDirection(character, direction, atTime) {
+        if (!character || typeof character.setDirection !== 'function') return this;
+        this.timeline.add(() => {
+            character.setDirection(direction);
+        }, atTime || '+=0');
+        return this;
+    }
+
+    // Look at another character or position
+    lookAt(character, target, atTime) {
+        if (!character) return this;
+        this.timeline.add(() => {
+            if (typeof character.lookAt === 'function') {
+                const targetPos = target.sprite ? target.sprite.position : target;
+                character.lookAt(targetPos);
+            } else if (typeof character.setDirection === 'function') {
+                const targetPos = target.sprite ? target.sprite.position : target;
+                const deltaX = targetPos.x - character.sprite.x;
+                if (Math.abs(deltaX) > 5) {
+                    character.setDirection(deltaX > 0 ? 'right' : 'left');
+                }
+            }
+        }, atTime || '+=0');
+        return this;
+    }
+
+    animate(character, animationName, atTime) {
+        if (!character) return this;
+        this.timeline.add(() => {
+            if (typeof character.playAnimation === 'function') {
+                character.playAnimation(animationName);
+            }
+        }, atTime || '+=0');
+        return this;
+    }
+
+    // Enhanced speak method with better bubble positioning
+    speak(character, text, duration = 2, atTime) {
+        if (!character) return this;
+        this.timeline.add(() => {
+            if (typeof character.showBubble === 'function') {
+                // Use character's enhanced showBubble method
+                const stage = character.sprite.parent || character.stage;
+                character.showBubble(text, stage, duration);
+            } else {
+                // Fallback for older character implementation
+                console.warn('Character does not have showBubble method');
+            }
+        }, atTime || '+=0');
+        return this;
+    }
+
+    // Action animations
+    attack(character, target = null, atTime) {
+        if (!character) return this;
+        this.timeline.add(() => {
+            if (typeof character.attack === 'function') {
+                const targetPos = target ? (target.sprite ? target.sprite.position : target) : null;
+                character.attack(targetPos);
+            } else if (typeof character.playAnimation === 'function') {
+                if (target && typeof character.lookAt === 'function') {
+                    const targetPos = target.sprite ? target.sprite.position : target;
+                    character.lookAt(targetPos);
+                }
+                character.playAnimation('attack');
+            }
+        }, atTime || '+=0');
+        return this;
+    }
+
+    hurt(character, knockbackForce = 20, atTime) {
+        if (!character) return this;
+        this.timeline.add(() => {
+            if (typeof character.hurt === 'function') {
+                character.hurt(knockbackForce);
+            } else if (typeof character.playAnimation === 'function') {
+                character.playAnimation('hurt');
+            }
+        }, atTime || '+=0');
+        return this;
+    }
+
+    changeBackground(background, opts = {}, atTime) {
+        this.timeline.add(() => {
+            if (opts.color !== undefined) background.setColor(opts.color);
+            if (opts.texture) background.setTexture(opts.texture);
+        }, atTime || '+=0');
+        return this;
+    }
+
+    call(fn, atTime) {
+        this.timeline.add(() => fn && fn());
+        return this;
+    }
+
+    play() {
+        this.timeline.play();
+        return this;
+    }
+
+    pause() {
+        this.timeline.pause();
+        return this;
+    }
+
+    seek(time) {
+        this.timeline.seek(time);
+        return this;
     }
 }
