@@ -26,30 +26,20 @@ export class Character {
 			...options.animationSpeeds
 		};
 		
-		// Initialize sprite with idle animation
-		const idleTex = (this.spritesheet && this.spritesheet.animations && this.spritesheet.animations.idle) || [];
-		
-		if (idleTex.length === 0) {
-			console.warn('No idle animation found in spritesheet, using placeholder');
-			// Create a simple placeholder texture if no animations are available
-			const canvas = document.createElement('canvas');
-			canvas.width = 64;
-			canvas.height = 64;
-			const ctx = canvas.getContext('2d');
-			ctx.fillStyle = '#7ED321';
-			ctx.fillRect(0, 0, 64, 64);
-			ctx.fillStyle = '#FFFFFF';
-			ctx.font = '12px Arial';
-			ctx.textAlign = 'center';
-			ctx.fillText('CHAR', 32, 35);
-			idleTex.push(PIXI.Texture.from(canvas));
+		// Create sprite - either from spritesheet or simple graphics
+		if (this.spritesheet && this.spritesheet.animations && this.spritesheet.animations.idle) {
+			// Use spritesheet animation
+			const idleTex = this.spritesheet.animations.idle;
+			this.sprite = new PIXI.AnimatedSprite(idleTex);
+			this.sprite.animationSpeed = this.animationSpeeds.idle;
+			this.sprite.play();
+		} else {
+			// Create simple graphic character
+			this.sprite = this.createSimpleCharacterGraphic(options);
 		}
 		
-		this.sprite = new PIXI.AnimatedSprite(idleTex);
 		this.sprite.anchor.set(0.5, 1); // Anchor at bottom center for ground positioning
 		this.sprite.position.set(startPosition.x, this.groundY);
-		this.sprite.animationSpeed = this.animationSpeeds.idle;
-		this.sprite.play();
 		
 		// Character properties
 		this._bubble = null;
@@ -69,6 +59,54 @@ export class Character {
 		
 		// Initialize direction
 		this.setDirection(options.direction || 'right');
+	}
+	
+	createSimpleCharacterGraphic(options = {}) {
+		const container = new PIXI.Container();
+		
+		// Character body (rectangle)
+		const body = new PIXI.Graphics();
+		const color = options.color || 0x7ED321;
+		body.beginFill(color);
+		body.drawRoundedRect(-15, -50, 30, 50, 5);
+		body.endFill();
+		
+		// Character head (circle)
+		const head = new PIXI.Graphics();
+		head.beginFill(color);
+		head.drawCircle(0, -60, 12);
+		head.endFill();
+		
+		// Character eyes
+		const leftEye = new PIXI.Graphics();
+		leftEye.beginFill(0x000000);
+		leftEye.drawCircle(-5, -60, 2);
+		leftEye.endFill();
+		
+		const rightEye = new PIXI.Graphics();
+		rightEye.beginFill(0x000000);
+		rightEye.drawCircle(5, -60, 2);
+		rightEye.endFill();
+		
+		// Add name text
+		if (options.name) {
+			const nameText = new PIXI.Text(options.name, {
+				fontFamily: 'Arial',
+				fontSize: 12,
+				fill: 0xFFFFFF,
+				align: 'center'
+			});
+			nameText.anchor.set(0.5);
+			nameText.position.set(0, -25);
+			container.addChild(nameText);
+		}
+		
+		container.addChild(body);
+		container.addChild(head);
+		container.addChild(leftEye);
+		container.addChild(rightEye);
+		
+		return container;
 	}
 
 	moveTo(position, duration = null, animationType = 'walk') {
