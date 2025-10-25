@@ -1,0 +1,743 @@
+{"frames": {
+
+"SPR_CHILL_BOY_Chill_Idle_000.png":
+{
+	"frame": {"x":459,"y":1,"w":286,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":80,"w":286,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_001.png":
+{
+	"frame": {"x":449,"y":577,"w":287,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_002.png":
+{
+	"frame": {"x":907,"y":1,"w":286,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":76,"w":286,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_003.png":
+{
+	"frame": {"x":899,"y":577,"w":287,"h":451},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":75,"w":287,"h":451},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_004.png":
+{
+	"frame": {"x":1359,"y":1,"w":286,"h":453},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":204,"y":73,"w":286,"h":453},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_005.png":
+{
+	"frame": {"x":1814,"y":1,"w":286,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":76,"w":286,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_006.png":
+{
+	"frame": {"x":1352,"y":577,"w":287,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_007.png":
+{
+	"frame": {"x":1,"y":575,"w":287,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":80,"w":287,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_008.png":
+{
+	"frame": {"x":1802,"y":577,"w":287,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":83,"w":287,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_009.png":
+{
+	"frame": {"x":3597,"y":716,"w":288,"h":441},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":85,"w":288,"h":441},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_010.png":
+{
+	"frame": {"x":2695,"y":866,"w":288,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":83,"w":288,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Chill_Idle_011.png":
+{
+	"frame": {"x":2247,"y":577,"w":287,"h":445},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":81,"w":287,"h":445},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_000.png":
+{
+	"frame": {"x":2266,"y":1,"w":286,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":80,"w":286,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_001.png":
+{
+	"frame": {"x":1789,"y":2373,"w":341,"h":471},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":175,"y":44,"w":341,"h":471},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_002.png":
+{
+	"frame": {"x":1877,"y":2720,"w":391,"h":447},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":34,"w":391,"h":447},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_003.png":
+{
+	"frame": {"x":3155,"y":1446,"w":425,"h":345},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":169,"y":86,"w":425,"h":345},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_004.png":
+{
+	"frame": {"x":1831,"y":1445,"w":421,"h":297},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":175,"w":421,"h":297},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_005.png":
+{
+	"frame": {"x":3625,"y":1,"w":419,"h":297},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":207,"y":245,"w":419,"h":297},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_006.png":
+{
+	"frame": {"x":3602,"y":422,"w":433,"h":292},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":289,"w":433,"h":292},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_007.png":
+{
+	"frame": {"x":2714,"y":1,"w":461,"h":286},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":308,"w":461,"h":286},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_008.png":
+{
+	"frame": {"x":2714,"y":1,"w":461,"h":286},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":308,"w":461,"h":286},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Dead1_009.png":
+{
+	"frame": {"x":2714,"y":1,"w":461,"h":286},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":308,"w":461,"h":286},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Fall_000.png":
+{
+	"frame": {"x":3610,"y":1888,"w":364,"h":432},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":148,"y":30,"w":364,"h":432},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_000.png":
+{
+	"frame": {"x":445,"y":2355,"w":339,"h":438},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":172,"y":24,"w":339,"h":438},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_001.png":
+{
+	"frame": {"x":445,"y":2703,"w":357,"h":444},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":151,"y":18,"w":357,"h":444},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_002.png":
+{
+	"frame": {"x":448,"y":2044,"w":309,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":13,"w":309,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_003.png":
+{
+	"frame": {"x":1,"y":2685,"w":353,"h":442},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":157,"y":20,"w":353,"h":442},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_004.png":
+{
+	"frame": {"x":3153,"y":2656,"w":351,"h":433},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":160,"y":29,"w":351,"h":433},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_005.png":
+{
+	"frame": {"x":2775,"y":1745,"w":355,"h":431},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":157,"y":31,"w":355,"h":431},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_006.png":
+{
+	"frame": {"x":3588,"y":2656,"w":352,"h":433},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":161,"y":29,"w":352,"h":433},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Throw_007.png":
+{
+	"frame": {"x":2715,"y":2530,"w":346,"h":436},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":167,"y":26,"w":346,"h":436},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Jump_Up_000.png":
+{
+	"frame": {"x":885,"y":2365,"w":336,"h":459},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":180,"y":5,"w":336,"h":459},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_000.png":
+{
+	"frame": {"x":1384,"y":2716,"w":381,"h":491},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":35,"w":381,"h":491},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_001.png":
+{
+	"frame": {"x":1822,"y":2055,"w":316,"h":461},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":181,"y":65,"w":316,"h":461},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_002.png":
+{
+	"frame": {"x":1823,"y":1745,"w":308,"h":474},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":184,"y":52,"w":308,"h":474},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_003.png":
+{
+	"frame": {"x":913,"y":1740,"w":307,"h":476},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":50,"w":307,"h":476},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_004.png":
+{
+	"frame": {"x":908,"y":1445,"w":293,"h":458},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":68,"w":293,"h":458},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_005.png":
+{
+	"frame": {"x":891,"y":2708,"w":370,"h":491},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":35,"w":370,"h":491},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_006.png":
+{
+	"frame": {"x":1368,"y":1445,"w":293,"h":461},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":65,"w":293,"h":461},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_007.png":
+{
+	"frame": {"x":2299,"y":1745,"w":308,"h":474},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":52,"w":308,"h":474},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_008.png":
+{
+	"frame": {"x":3132,"y":1888,"w":308,"h":476},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":183,"y":50,"w":308,"h":476},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Dizzy_009.png":
+{
+	"frame": {"x":1362,"y":2049,"w":316,"h":458},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":181,"y":68,"w":316,"h":458},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_000.png":
+{
+	"frame": {"x":3177,"y":1,"w":286,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":80,"w":286,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_001.png":
+{
+	"frame": {"x":454,"y":1445,"w":289,"h":452},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":207,"y":74,"w":289,"h":452},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_002.png":
+{
+	"frame": {"x":453,"y":1740,"w":302,"h":458},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":68,"w":302,"h":458},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_003.png":
+{
+	"frame": {"x":898,"y":2049,"w":314,"h":462},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":64,"w":314,"h":462},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_004.png":
+{
+	"frame": {"x":453,"y":1740,"w":302,"h":458},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":68,"w":302,"h":458},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Hurt_005.png":
+{
+	"frame": {"x":454,"y":1445,"w":289,"h":452},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":207,"y":74,"w":289,"h":452},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_000.png":
+{
+	"frame": {"x":1,"y":287,"w":286,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":80,"w":286,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_001.png":
+{
+	"frame": {"x":2694,"y":577,"w":287,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_002.png":
+{
+	"frame": {"x":449,"y":289,"w":286,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":76,"w":286,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_003.png":
+{
+	"frame": {"x":3144,"y":577,"w":287,"h":451},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":75,"w":287,"h":451},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_004.png":
+{
+	"frame": {"x":901,"y":289,"w":286,"h":453},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":204,"y":73,"w":286,"h":453},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_005.png":
+{
+	"frame": {"x":1356,"y":289,"w":286,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":76,"w":286,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_006.png":
+{
+	"frame": {"x":449,"y":866,"w":287,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_007.png":
+{
+	"frame": {"x":1,"y":864,"w":287,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":80,"w":287,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_008.png":
+{
+	"frame": {"x":899,"y":866,"w":287,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":83,"w":287,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_009.png":
+{
+	"frame": {"x":3140,"y":866,"w":288,"h":441},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":85,"w":288,"h":441},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_010.png":
+{
+	"frame": {"x":3583,"y":1006,"w":288,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":83,"w":288,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Idle_011.png":
+{
+	"frame": {"x":1344,"y":866,"w":287,"h":445},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":81,"w":287,"h":445},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_000.png":
+{
+	"frame": {"x":1808,"y":289,"w":286,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":80,"w":286,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_001.png":
+{
+	"frame": {"x":3541,"y":2322,"w":332,"h":452},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":165,"y":74,"w":332,"h":452},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_002.png":
+{
+	"frame": {"x":1,"y":1,"w":284,"h":456},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":222,"y":70,"w":284,"h":456},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_003.png":
+{
+	"frame": {"x":2285,"y":2055,"w":317,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":174,"y":76,"w":317,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_004.png":
+{
+	"frame": {"x":1,"y":2347,"w":336,"h":442},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":188,"y":84,"w":336,"h":442},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_005.png":
+{
+	"frame": {"x":1346,"y":2367,"w":339,"h":441},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":186,"y":85,"w":339,"h":441},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_006.png":
+{
+	"frame": {"x":2737,"y":2198,"w":330,"h":442},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":190,"y":84,"w":330,"h":442},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Throw_007.png":
+{
+	"frame": {"x":1,"y":2037,"w":308,"h":445},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":81,"w":308,"h":445},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_000.png":
+{
+	"frame": {"x":2256,"y":289,"w":286,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":206,"y":75,"w":286,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_001.png":
+{
+	"frame": {"x":1791,"y":866,"w":287,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_002.png":
+{
+	"frame": {"x":1,"y":1153,"w":288,"h":442},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":81,"w":288,"h":442},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_003.png":
+{
+	"frame": {"x":445,"y":1155,"w":288,"h":441},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":83,"w":288,"h":441},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_004.png":
+{
+	"frame": {"x":888,"y":1155,"w":288,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":81,"w":288,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_005.png":
+{
+	"frame": {"x":3502,"y":1586,"w":300,"h":455},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":300,"h":455},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_006.png":
+{
+	"frame": {"x":2262,"y":2374,"w":344,"h":451},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":180,"y":75,"w":344,"h":451},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_007.png":
+{
+	"frame": {"x":1,"y":1735,"w":300,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":300,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_008.png":
+{
+	"frame": {"x":1338,"y":1155,"w":288,"h":445},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":81,"w":288,"h":445},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_009.png":
+{
+	"frame": {"x":1785,"y":1155,"w":288,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":83,"w":288,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_010.png":
+{
+	"frame": {"x":2230,"y":1155,"w":288,"h":448},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":81,"w":288,"h":448},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Normal_Walk_011.png":
+{
+	"frame": {"x":2239,"y":866,"w":287,"h":454},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":78,"w":287,"h":454},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_000.png":
+{
+	"frame": {"x":1391,"y":1740,"w":307,"h":430},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":67,"w":307,"h":430},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_001.png":
+{
+	"frame": {"x":2706,"y":289,"w":286,"h":441},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":74,"w":286,"h":441},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_002.png":
+{
+	"frame": {"x":2680,"y":1156,"w":288,"h":443},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":81,"w":288,"h":443},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_003.png":
+{
+	"frame": {"x":3125,"y":1156,"w":288,"h":450},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":81,"w":288,"h":450},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_004.png":
+{
+	"frame": {"x":2254,"y":1446,"w":297,"h":452},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":74,"w":297,"h":452},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_005.png":
+{
+	"frame": {"x":3181,"y":2198,"w":358,"h":432},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":175,"y":67,"w":358,"h":432},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_006.png":
+{
+	"frame": {"x":2708,"y":1446,"w":297,"h":445},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":74,"w":297,"h":445},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_007.png":
+{
+	"frame": {"x":3577,"y":1296,"w":288,"h":446},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":81,"w":288,"h":446},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_008.png":
+{
+	"frame": {"x":1,"y":1445,"w":288,"h":451},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":81,"w":288,"h":451},
+	"sourceSize": {"w":659,"h":626}
+},
+"SPR_CHILL_BOY_Running_009.png":
+{
+	"frame": {"x":3149,"y":289,"w":286,"h":451},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":74,"w":286,"h":451},
+	"sourceSize": {"w":659,"h":626}
+}},
+"animations": {
+	"SPR_CHILL_BOY_Chill_Idle": ["SPR_CHILL_BOY_Chill_Idle_000.png","SPR_CHILL_BOY_Chill_Idle_001.png","SPR_CHILL_BOY_Chill_Idle_002.png","SPR_CHILL_BOY_Chill_Idle_003.png","SPR_CHILL_BOY_Chill_Idle_004.png","SPR_CHILL_BOY_Chill_Idle_005.png","SPR_CHILL_BOY_Chill_Idle_006.png","SPR_CHILL_BOY_Chill_Idle_007.png","SPR_CHILL_BOY_Chill_Idle_008.png","SPR_CHILL_BOY_Chill_Idle_009.png","SPR_CHILL_BOY_Chill_Idle_010.png","SPR_CHILL_BOY_Chill_Idle_011.png"],
+	"SPR_CHILL_BOY_Dead1": ["SPR_CHILL_BOY_Dead1_000.png","SPR_CHILL_BOY_Dead1_001.png","SPR_CHILL_BOY_Dead1_002.png","SPR_CHILL_BOY_Dead1_003.png","SPR_CHILL_BOY_Dead1_004.png","SPR_CHILL_BOY_Dead1_005.png","SPR_CHILL_BOY_Dead1_006.png","SPR_CHILL_BOY_Dead1_007.png","SPR_CHILL_BOY_Dead1_008.png","SPR_CHILL_BOY_Dead1_009.png"],
+	"SPR_CHILL_BOY_Jump_Throw": ["SPR_CHILL_BOY_Jump_Throw_000.png","SPR_CHILL_BOY_Jump_Throw_001.png","SPR_CHILL_BOY_Jump_Throw_002.png","SPR_CHILL_BOY_Jump_Throw_003.png","SPR_CHILL_BOY_Jump_Throw_004.png","SPR_CHILL_BOY_Jump_Throw_005.png","SPR_CHILL_BOY_Jump_Throw_006.png","SPR_CHILL_BOY_Jump_Throw_007.png"],
+	"SPR_CHILL_BOY_Normal_Dizzy": ["SPR_CHILL_BOY_Normal_Dizzy_000.png","SPR_CHILL_BOY_Normal_Dizzy_001.png","SPR_CHILL_BOY_Normal_Dizzy_002.png","SPR_CHILL_BOY_Normal_Dizzy_003.png","SPR_CHILL_BOY_Normal_Dizzy_004.png","SPR_CHILL_BOY_Normal_Dizzy_005.png","SPR_CHILL_BOY_Normal_Dizzy_006.png","SPR_CHILL_BOY_Normal_Dizzy_007.png","SPR_CHILL_BOY_Normal_Dizzy_008.png","SPR_CHILL_BOY_Normal_Dizzy_009.png"],
+	"SPR_CHILL_BOY_Normal_Hurt": ["SPR_CHILL_BOY_Normal_Hurt_000.png","SPR_CHILL_BOY_Normal_Hurt_001.png","SPR_CHILL_BOY_Normal_Hurt_002.png","SPR_CHILL_BOY_Normal_Hurt_003.png","SPR_CHILL_BOY_Normal_Hurt_004.png","SPR_CHILL_BOY_Normal_Hurt_005.png"],
+	"SPR_CHILL_BOY_Normal_Idle": ["SPR_CHILL_BOY_Normal_Idle_000.png","SPR_CHILL_BOY_Normal_Idle_001.png","SPR_CHILL_BOY_Normal_Idle_002.png","SPR_CHILL_BOY_Normal_Idle_003.png","SPR_CHILL_BOY_Normal_Idle_004.png","SPR_CHILL_BOY_Normal_Idle_005.png","SPR_CHILL_BOY_Normal_Idle_006.png","SPR_CHILL_BOY_Normal_Idle_007.png","SPR_CHILL_BOY_Normal_Idle_008.png","SPR_CHILL_BOY_Normal_Idle_009.png","SPR_CHILL_BOY_Normal_Idle_010.png","SPR_CHILL_BOY_Normal_Idle_011.png"],
+	"SPR_CHILL_BOY_Normal_Throw": ["SPR_CHILL_BOY_Normal_Throw_000.png","SPR_CHILL_BOY_Normal_Throw_001.png","SPR_CHILL_BOY_Normal_Throw_002.png","SPR_CHILL_BOY_Normal_Throw_003.png","SPR_CHILL_BOY_Normal_Throw_004.png","SPR_CHILL_BOY_Normal_Throw_005.png","SPR_CHILL_BOY_Normal_Throw_006.png","SPR_CHILL_BOY_Normal_Throw_007.png"],
+	"SPR_CHILL_BOY_Normal_Walk": ["SPR_CHILL_BOY_Normal_Walk_000.png","SPR_CHILL_BOY_Normal_Walk_001.png","SPR_CHILL_BOY_Normal_Walk_002.png","SPR_CHILL_BOY_Normal_Walk_003.png","SPR_CHILL_BOY_Normal_Walk_004.png","SPR_CHILL_BOY_Normal_Walk_005.png","SPR_CHILL_BOY_Normal_Walk_006.png","SPR_CHILL_BOY_Normal_Walk_007.png","SPR_CHILL_BOY_Normal_Walk_008.png","SPR_CHILL_BOY_Normal_Walk_009.png","SPR_CHILL_BOY_Normal_Walk_010.png","SPR_CHILL_BOY_Normal_Walk_011.png"],
+	"SPR_CHILL_BOY_Running": ["SPR_CHILL_BOY_Running_000.png","SPR_CHILL_BOY_Running_001.png","SPR_CHILL_BOY_Running_002.png","SPR_CHILL_BOY_Running_003.png","SPR_CHILL_BOY_Running_004.png","SPR_CHILL_BOY_Running_005.png","SPR_CHILL_BOY_Running_006.png","SPR_CHILL_BOY_Running_007.png","SPR_CHILL_BOY_Running_008.png","SPR_CHILL_BOY_Running_009.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "chill_boy.png",
+	"format": "RGBA8888",
+	"size": {"w":4039,"h":3112},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0d1a814ed709be3a286ec055a1adeb6d:98bbb83ffa35f82121b6dc34ee9bc3ab:159afe11c9422369445a928d96297179$"
+}
+}

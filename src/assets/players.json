@@ -1,0 +1,348 @@
+{"frames": {
+
+"bronze_1.png":
+{
+	"frame": {"x":74,"y":2162,"w":84,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":84},
+	"sourceSize": {"w":84,"h":84}
+},
+"bronze_2.png":
+{
+	"frame": {"x":184,"y":361,"w":66,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":84},
+	"sourceSize": {"w":66,"h":84}
+},
+"bronze_3.png":
+{
+	"frame": {"x":124,"y":822,"w":50,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":84},
+	"sourceSize": {"w":50,"h":84}
+},
+"bronze_4.png":
+{
+	"frame": {"x":235,"y":1,"w":14,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":84},
+	"sourceSize": {"w":14,"h":84}
+},
+"bubble.png":
+{
+	"frame": {"x":1,"y":1,"w":211,"h":215},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":211,"h":215},
+	"sourceSize": {"w":211,"h":215}
+},
+"bunny1_hurt.png":
+{
+	"frame": {"x":1,"y":518,"w":150,"h":174},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":174},
+	"sourceSize": {"w":150,"h":174}
+},
+"bunny1_jump.png":
+{
+	"frame": {"x":1,"y":214,"w":150,"h":181},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":181},
+	"sourceSize": {"w":150,"h":181}
+},
+"bunny1_ready.png":
+{
+	"frame": {"x":1,"y":1646,"w":120,"h":191},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":191},
+	"sourceSize": {"w":120,"h":191}
+},
+"bunny1_stand.png":
+{
+	"frame": {"x":1,"y":1240,"w":120,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":201},
+	"sourceSize": {"w":120,"h":201}
+},
+"bunny1_walk1.png":
+{
+	"frame": {"x":1,"y":1443,"w":120,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":201},
+	"sourceSize": {"w":120,"h":201}
+},
+"bunny1_walk2.png":
+{
+	"frame": {"x":1,"y":1031,"w":120,"h":207},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":207},
+	"sourceSize": {"w":120,"h":207}
+},
+"bunny2_hurt.png":
+{
+	"frame": {"x":1,"y":670,"w":150,"h":174},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":174},
+	"sourceSize": {"w":150,"h":174}
+},
+"bunny2_jump.png":
+{
+	"frame": {"x":1,"y":366,"w":150,"h":181},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":181},
+	"sourceSize": {"w":150,"h":181}
+},
+"bunny2_ready.png":
+{
+	"frame": {"x":123,"y":1490,"w":121,"h":191},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":191},
+	"sourceSize": {"w":121,"h":191}
+},
+"bunny2_stand.png":
+{
+	"frame": {"x":123,"y":1084,"w":121,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":201},
+	"sourceSize": {"w":121,"h":201}
+},
+"bunny2_walk1.png":
+{
+	"frame": {"x":123,"y":1287,"w":121,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":201},
+	"sourceSize": {"w":121,"h":201}
+},
+"bunny2_walk2.png":
+{
+	"frame": {"x":1,"y":822,"w":121,"h":207},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":207},
+	"sourceSize": {"w":121,"h":207}
+},
+"carrot.png":
+{
+	"frame": {"x":176,"y":940,"w":78,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":70},
+	"sourceSize": {"w":78,"h":70}
+},
+"carrot_gold.png":
+{
+	"frame": {"x":176,"y":1012,"w":78,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":70},
+	"sourceSize": {"w":78,"h":70}
+},
+"gold_1.png":
+{
+	"frame": {"x":160,"y":2162,"w":84,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":84},
+	"sourceSize": {"w":84,"h":84}
+},
+"gold_2.png":
+{
+	"frame": {"x":184,"y":447,"w":66,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":84},
+	"sourceSize": {"w":66,"h":84}
+},
+"gold_3.png":
+{
+	"frame": {"x":124,"y":908,"w":50,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":84},
+	"sourceSize": {"w":50,"h":84}
+},
+"gold_4.png":
+{
+	"frame": {"x":218,"y":1,"w":15,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":84},
+	"sourceSize": {"w":15,"h":84}
+},
+"jetpack.png":
+{
+	"frame": {"x":85,"y":1915,"w":133,"h":160},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":133,"h":160},
+	"sourceSize": {"w":133,"h":160}
+},
+"jetpack_item.png":
+{
+	"frame": {"x":1,"y":2071,"w":65,"h":77},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":77},
+	"sourceSize": {"w":65,"h":77}
+},
+"portal_orange.png":
+{
+	"frame": {"x":123,"y":1683,"w":230,"h":82},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":230,"h":82},
+	"sourceSize": {"w":230,"h":82}
+},
+"portal_yellow.png":
+{
+	"frame": {"x":1,"y":1839,"w":230,"h":82},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":230,"h":82},
+	"sourceSize": {"w":230,"h":82}
+},
+"powerup_bubble.png":
+{
+	"frame": {"x":1,"y":2138,"w":71,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":70},
+	"sourceSize": {"w":71,"h":70}
+},
+"powerup_bunny.png":
+{
+	"frame": {"x":1,"y":2210,"w":71,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":70},
+	"sourceSize": {"w":71,"h":70}
+},
+"powerup_empty.png":
+{
+	"frame": {"x":1,"y":2282,"w":71,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":70},
+	"sourceSize": {"w":71,"h":70}
+},
+"powerup_jetpack.png":
+{
+	"frame": {"x":160,"y":2248,"w":71,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":70},
+	"sourceSize": {"w":71,"h":70}
+},
+"powerup_wings.png":
+{
+	"frame": {"x":160,"y":2320,"w":71,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":70},
+	"sourceSize": {"w":71,"h":70}
+},
+"silver_1.png":
+{
+	"frame": {"x":74,"y":2248,"w":84,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":84},
+	"sourceSize": {"w":84,"h":84}
+},
+"silver_2.png":
+{
+	"frame": {"x":176,"y":854,"w":66,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":84},
+	"sourceSize": {"w":66,"h":84}
+},
+"silver_3.png":
+{
+	"frame": {"x":124,"y":994,"w":50,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":84},
+	"sourceSize": {"w":50,"h":84}
+},
+"silver_4.png":
+{
+	"frame": {"x":218,"y":87,"w":14,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":84},
+	"sourceSize": {"w":14,"h":84}
+},
+"spring.png":
+{
+	"frame": {"x":177,"y":533,"w":145,"h":77},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":77},
+	"sourceSize": {"w":145,"h":77}
+},
+"spring_in.png":
+{
+	"frame": {"x":184,"y":214,"w":145,"h":57},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":57},
+	"sourceSize": {"w":145,"h":57}
+},
+"spring_out.png":
+{
+	"frame": {"x":85,"y":2050,"w":145,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":110},
+	"sourceSize": {"w":145,"h":110}
+},
+"wing_left.png":
+{
+	"frame": {"x":177,"y":680,"w":85,"h":74},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":85,"h":74},
+	"sourceSize": {"w":85,"h":74}
+},
+"wing_right.png":
+{
+	"frame": {"x":177,"y":767,"w":85,"h":74},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":85,"h":74},
+	"sourceSize": {"w":85,"h":74}
+}},
+"animations": {
+	"bronze": ["bronze_1.png","bronze_2.png","bronze_3.png","bronze_4.png"],
+	"bunny1_walk": ["bunny1_walk1.png","bunny1_walk2.png"],
+	"bunny2_walk": ["bunny2_walk1.png","bunny2_walk2.png"],
+	"gold": ["gold_1.png","gold_2.png","gold_3.png","gold_4.png"],
+	"silver": ["silver_1.png","silver_2.png","silver_3.png","silver_4.png"],
+	"bunny": ["bunny1_hurt","bunny1_ready","bunny1_walk1"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "players.png",
+	"format": "RGBA8888",
+	"size": {"w":255,"h":2391},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a5eb6959f38eb85f96e2e665ba34bf3b:89715778ff408dd7543d625bcee367c6:46e8da22ce863765fb0bab090ed87b34$"
+}
+}

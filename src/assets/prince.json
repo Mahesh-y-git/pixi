@@ -1,0 +1,1149 @@
+{"frames": {
+
+"Princess-Attack2_00.png":
+{
+	"frame": {"x":1243,"y":1993,"w":267,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":0,"w":267,"h":318},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_01.png":
+{
+	"frame": {"x":978,"y":2399,"w":284,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":284,"h":318},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_02.png":
+{
+	"frame": {"x":2162,"y":2565,"w":291,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":3,"w":291,"h":315},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_03.png":
+{
+	"frame": {"x":3332,"y":317,"w":293,"h":312},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":6,"w":293,"h":312},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_04.png":
+{
+	"frame": {"x":2993,"y":1907,"w":288,"h":307},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":11,"w":288,"h":307},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_05.png":
+{
+	"frame": {"x":3346,"y":1267,"w":278,"h":304},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":278,"h":304},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_06.png":
+{
+	"frame": {"x":1898,"y":2579,"w":262,"h":300},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":20,"w":262,"h":300},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_07.png":
+{
+	"frame": {"x":3262,"y":2523,"w":216,"h":297},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":60,"y":23,"w":216,"h":297},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_08.png":
+{
+	"frame": {"x":3842,"y":564,"w":232,"h":290},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":28,"w":232,"h":290},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_09.png":
+{
+	"frame": {"x":3480,"y":2652,"w":226,"h":281},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":38,"w":226,"h":281},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_10.png":
+{
+	"frame": {"x":3807,"y":2029,"w":226,"h":270},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":48,"w":226,"h":270},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_11.png":
+{
+	"frame": {"x":3763,"y":2652,"w":217,"h":281},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":37,"w":217,"h":281},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_12.png":
+{
+	"frame": {"x":3480,"y":2430,"w":220,"h":295},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":23,"w":220,"h":295},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack2_13.png":
+{
+	"frame": {"x":3839,"y":856,"w":240,"h":310},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":8,"w":240,"h":310},
+	"sourceSize": {"w":304,"h":320}
+},
+"Princess-Attack_00.png":
+{
+	"frame": {"x":1245,"y":1312,"w":267,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":16,"w":267,"h":319},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_01.png":
+{
+	"frame": {"x":3212,"y":952,"w":241,"h":313},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":23,"w":241,"h":313},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_02.png":
+{
+	"frame": {"x":300,"y":1432,"w":243,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":0,"w":243,"h":336},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_03.png":
+{
+	"frame": {"x":1240,"y":656,"w":217,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":16,"w":217,"h":320},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_04.png":
+{
+	"frame": {"x":3640,"y":1,"w":196,"h":311},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":26,"w":196,"h":311},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_05.png":
+{
+	"frame": {"x":2308,"y":1921,"w":203,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":21,"w":203,"h":316},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_06.png":
+{
+	"frame": {"x":1793,"y":1609,"w":207,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":19,"w":207,"h":318},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_07.png":
+{
+	"frame": {"x":1908,"y":1,"w":210,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":18,"w":210,"h":319},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_08.png":
+{
+	"frame": {"x":765,"y":2426,"w":211,"h":321},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":18,"w":211,"h":321},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_09.png":
+{
+	"frame": {"x":2455,"y":1600,"w":190,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":23,"w":190,"h":316},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_10.png":
+{
+	"frame": {"x":1,"y":1,"w":371,"h":296},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":43,"w":371,"h":296},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_11.png":
+{
+	"frame": {"x":1,"y":374,"w":368,"h":308},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":32,"w":368,"h":308},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_12.png":
+{
+	"frame": {"x":299,"y":1,"w":356,"h":316},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":23,"w":356,"h":316},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Attack_13.png":
+{
+	"frame": {"x":1592,"y":1,"w":314,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":18,"w":314,"h":319},
+	"sourceSize": {"w":385,"h":343}
+},
+"Princess-Die_00.png":
+{
+	"frame": {"x":982,"y":1750,"w":254,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":13,"w":254,"h":320},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_01.png":
+{
+	"frame": {"x":2729,"y":2551,"w":255,"h":310},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":123,"y":11,"w":255,"h":310},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_02.png":
+{
+	"frame": {"x":3079,"y":2216,"w":259,"h":303},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":122,"y":10,"w":259,"h":303},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_03.png":
+{
+	"frame": {"x":3824,"y":1168,"w":256,"h":299},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":127,"y":7,"w":256,"h":299},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_04.png":
+{
+	"frame": {"x":3838,"y":1,"w":241,"h":299},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":142,"y":2,"w":241,"h":299},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_05.png":
+{
+	"frame": {"x":3842,"y":302,"w":260,"h":233},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":87,"y":64,"w":260,"h":233},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_06.png":
+{
+	"frame": {"x":3547,"y":2165,"w":263,"h":232},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":103,"w":263,"h":232},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_07.png":
+{
+	"frame": {"x":3633,"y":628,"w":269,"h":204},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":194,"w":269,"h":204},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_08.png":
+{
+	"frame": {"x":3455,"y":945,"w":295,"h":171},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":218,"w":295,"h":171},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_09.png":
+{
+	"frame": {"x":529,"y":2114,"w":328,"h":167},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":215,"w":328,"h":167},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_10.png":
+{
+	"frame": {"x":545,"y":1423,"w":326,"h":170},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":232,"w":326,"h":170},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_11.png":
+{
+	"frame": {"x":1410,"y":1,"w":320,"h":180},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":235,"w":320,"h":180},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Die_12.png":
+{
+	"frame": {"x":760,"y":1024,"w":325,"h":172},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":236,"w":325,"h":172},
+	"sourceSize": {"w":383,"h":418}
+},
+"Princess-Idle_00.png":
+{
+	"frame": {"x":1512,"y":1993,"w":257,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":0,"w":257,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_01.png":
+{
+	"frame": {"x":1524,"y":2313,"w":257,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":257,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_02.png":
+{
+	"frame": {"x":1940,"y":964,"w":256,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":0,"w":256,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_03.png":
+{
+	"frame": {"x":1971,"y":643,"w":255,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":0,"w":255,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_04.png":
+{
+	"frame": {"x":2067,"y":322,"w":254,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":254,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_05.png":
+{
+	"frame": {"x":2120,"y":1,"w":253,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":0,"w":253,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_06.png":
+{
+	"frame": {"x":1771,"y":1940,"w":253,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":0,"w":253,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_07.png":
+{
+	"frame": {"x":2375,"y":1,"w":252,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":1,"w":252,"h":317},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_08.png":
+{
+	"frame": {"x":1783,"y":2260,"w":251,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":1,"w":251,"h":317},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_09.png":
+{
+	"frame": {"x":2485,"y":640,"w":251,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":2,"w":251,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_10.png":
+{
+	"frame": {"x":2579,"y":320,"w":250,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":2,"w":250,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_11.png":
+{
+	"frame": {"x":2629,"y":1,"w":249,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":3,"w":249,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_12.png":
+{
+	"frame": {"x":2036,"y":2247,"w":249,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":3,"w":249,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_13.png":
+{
+	"frame": {"x":2287,"y":2247,"w":248,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":3,"w":248,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_14.png":
+{
+	"frame": {"x":1264,"y":2633,"w":247,"h":315},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":4,"w":247,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_15.png":
+{
+	"frame": {"x":2513,"y":1918,"w":248,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":4,"w":248,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_16.png":
+{
+	"frame": {"x":2647,"y":1596,"w":248,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":4,"w":248,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_17.png":
+{
+	"frame": {"x":1581,"y":2633,"w":247,"h":315},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":4,"w":247,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_18.png":
+{
+	"frame": {"x":3131,"y":1,"w":247,"h":314},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":5,"w":247,"h":314},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_19.png":
+{
+	"frame": {"x":3082,"y":318,"w":248,"h":314},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":5,"w":248,"h":314},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_20.png":
+{
+	"frame": {"x":2537,"y":2235,"w":247,"h":314},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":5,"w":247,"h":314},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_21.png":
+{
+	"frame": {"x":2818,"y":1275,"w":248,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":4,"w":248,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_22.png":
+{
+	"frame": {"x":2831,"y":319,"w":249,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":4,"w":249,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_23.png":
+{
+	"frame": {"x":2710,"y":958,"w":250,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":4,"w":250,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_24.png":
+{
+	"frame": {"x":2880,"y":1,"w":249,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":4,"w":249,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_25.png":
+{
+	"frame": {"x":2738,"y":638,"w":250,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":4,"w":250,"h":315},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_26.png":
+{
+	"frame": {"x":2456,"y":961,"w":252,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":3,"w":252,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_27.png":
+{
+	"frame": {"x":2200,"y":1603,"w":253,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":3,"w":253,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_28.png":
+{
+	"frame": {"x":2295,"y":1282,"w":253,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":3,"w":253,"h":316},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_29.png":
+{
+	"frame": {"x":2323,"y":321,"w":254,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":2,"w":254,"h":317},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_30.png":
+{
+	"frame": {"x":2228,"y":642,"w":255,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":255,"h":317},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_31.png":
+{
+	"frame": {"x":2198,"y":963,"w":256,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":256,"h":317},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_32.png":
+{
+	"frame": {"x":1534,"y":1620,"w":257,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":257,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_33.png":
+{
+	"frame": {"x":1774,"y":1289,"w":257,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":257,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_34.png":
+{
+	"frame": {"x":1264,"y":2313,"w":258,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":258,"h":318},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_35.png":
+{
+	"frame": {"x":1420,"y":978,"w":258,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":258,"h":319},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_36.png":
+{
+	"frame": {"x":1459,"y":647,"w":258,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":258,"h":319},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_37.png":
+{
+	"frame": {"x":1593,"y":322,"w":258,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":258,"h":319},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_38.png":
+{
+	"frame": {"x":1514,"y":1299,"w":258,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":258,"h":319},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Idle_39.png":
+{
+	"frame": {"x":1680,"y":968,"w":258,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":258,"h":319},
+	"sourceSize": {"w":265,"h":319}
+},
+"Princess-Jump_00.png":
+{
+	"frame": {"x":2033,"y":1284,"w":260,"h":317},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":62,"y":85,"w":260,"h":317},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_01.png":
+{
+	"frame": {"x":3810,"y":1738,"w":270,"h":289},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":112,"w":270,"h":289},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_02.png":
+{
+	"frame": {"x":3811,"y":1469,"w":269,"h":267},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":134,"w":269,"h":267},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_03.png":
+{
+	"frame": {"x":3781,"y":2257,"w":264,"h":299},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":102,"w":264,"h":299},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_04.png":
+{
+	"frame": {"x":1,"y":2115,"w":262,"h":337},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":68,"w":262,"h":337},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_05.png":
+{
+	"frame": {"x":215,"y":1090,"w":260,"h":340},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":59,"w":260,"h":340},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_06.png":
+{
+	"frame": {"x":283,"y":1776,"w":259,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":39,"w":259,"h":336},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_07.png":
+{
+	"frame": {"x":265,"y":2115,"w":262,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":19,"w":262,"h":336},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_08.png":
+{
+	"frame": {"x":717,"y":1423,"w":270,"h":325},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":10,"w":270,"h":325},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_09.png":
+{
+	"frame": {"x":2026,"y":1929,"w":280,"h":316},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":4,"w":280,"h":316},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_10.png":
+{
+	"frame": {"x":2786,"y":2229,"w":291,"h":308},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":1,"w":291,"h":308},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_11.png":
+{
+	"frame": {"x":1238,"y":1672,"w":294,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":3,"w":294,"h":319},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_12.png":
+{
+	"frame": {"x":835,"y":333,"w":291,"h":330},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":6,"w":291,"h":330},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_13.png":
+{
+	"frame": {"x":1,"y":1776,"w":280,"h":337},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":15,"w":280,"h":337},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_14.png":
+{
+	"frame": {"x":1,"y":744,"w":271,"h":344},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":29,"w":271,"h":344},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_15.png":
+{
+	"frame": {"x":1,"y":2454,"w":265,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":63,"w":265,"h":336},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_16.png":
+{
+	"frame": {"x":2990,"y":636,"w":254,"h":314},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":91,"w":254,"h":314},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_17.png":
+{
+	"frame": {"x":3547,"y":1863,"w":258,"h":300},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":103,"w":258,"h":300},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_18.png":
+{
+	"frame": {"x":3547,"y":1573,"w":261,"h":288},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":64,"y":114,"w":261,"h":288},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Jump_19.png":
+{
+	"frame": {"x":3283,"y":1895,"w":262,"h":300},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":64,"y":101,"w":262,"h":300},
+	"sourceSize": {"w":327,"h":410}
+},
+"Princess-Run_00.png":
+{
+	"frame": {"x":1178,"y":1,"w":230,"h":322},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":3,"w":230,"h":322},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_01.png":
+{
+	"frame": {"x":611,"y":359,"w":222,"h":331},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":4,"w":222,"h":331},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_02.png":
+{
+	"frame": {"x":1,"y":1090,"w":212,"h":342},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":5,"w":212,"h":342},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_03.png":
+{
+	"frame": {"x":274,"y":744,"w":208,"h":340},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":12,"w":208,"h":340},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_04.png":
+{
+	"frame": {"x":1385,"y":325,"w":206,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":63,"y":31,"w":206,"h":320},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_05.png":
+{
+	"frame": {"x":3627,"y":315,"w":213,"h":311},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":62,"y":40,"w":213,"h":311},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_06.png":
+{
+	"frame": {"x":2763,"y":1913,"w":228,"h":314},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":39,"w":228,"h":314},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_07.png":
+{
+	"frame": {"x":2962,"y":955,"w":248,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":35,"w":248,"h":315},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_08.png":
+{
+	"frame": {"x":915,"y":1,"w":261,"h":329},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":20,"w":261,"h":329},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_09.png":
+{
+	"frame": {"x":477,"y":1086,"w":281,"h":335},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":6,"w":281,"h":335},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_10.png":
+{
+	"frame": {"x":713,"y":692,"w":292,"h":330},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":4,"w":292,"h":330},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_11.png":
+{
+	"frame": {"x":617,"y":1,"w":296,"h":330},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":4,"w":296,"h":330},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_12.png":
+{
+	"frame": {"x":311,"y":359,"w":298,"h":337},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":6,"w":298,"h":337},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_13.png":
+{
+	"frame": {"x":1,"y":1434,"w":297,"h":340},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":12,"w":297,"h":340},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_14.png":
+{
+	"frame": {"x":949,"y":2077,"w":292,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":31,"w":292,"h":320},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_15.png":
+{
+	"frame": {"x":2897,"y":1592,"w":284,"h":313},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":40,"w":284,"h":313},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_16.png":
+{
+	"frame": {"x":2455,"y":2565,"w":272,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":39,"w":272,"h":315},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_17.png":
+{
+	"frame": {"x":1128,"y":332,"w":255,"h":322},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":35,"w":255,"h":322},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_18.png":
+{
+	"frame": {"x":268,"y":2453,"w":250,"h":329},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":23,"w":250,"h":329},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Run_19.png":
+{
+	"frame": {"x":1176,"y":990,"w":242,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":7,"w":242,"h":320},
+	"sourceSize": {"w":304,"h":357}
+},
+"Princess-Walk_00.png":
+{
+	"frame": {"x":2986,"y":2539,"w":274,"h":305},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":20,"w":274,"h":305},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_01.png":
+{
+	"frame": {"x":3068,"y":1272,"w":276,"h":313},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":17,"w":276,"h":313},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_02.png":
+{
+	"frame": {"x":2550,"y":1279,"w":266,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":12,"w":266,"h":315},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_03.png":
+{
+	"frame": {"x":989,"y":1350,"w":254,"h":320},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":6,"w":254,"h":320},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_04.png":
+{
+	"frame": {"x":934,"y":1024,"w":240,"h":324},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":1,"w":240,"h":324},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_05.png":
+{
+	"frame": {"x":1007,"y":665,"w":231,"h":323},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":0,"w":231,"h":323},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_06.png":
+{
+	"frame": {"x":757,"y":1750,"w":223,"h":325},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":0,"w":223,"h":325},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_07.png":
+{
+	"frame": {"x":1853,"y":322,"w":212,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":6,"w":212,"h":319},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_08.png":
+{
+	"frame": {"x":3431,"y":631,"w":200,"h":312},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":14,"w":200,"h":312},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_09.png":
+{
+	"frame": {"x":3633,"y":899,"w":189,"h":308},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":18,"w":189,"h":308},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_10.png":
+{
+	"frame": {"x":3628,"y":1209,"w":181,"h":310},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":19,"w":181,"h":310},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_11.png":
+{
+	"frame": {"x":3246,"y":634,"w":183,"h":313},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":18,"w":183,"h":313},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_12.png":
+{
+	"frame": {"x":2002,"y":1609,"w":196,"h":318},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":13,"w":196,"h":318},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_13.png":
+{
+	"frame": {"x":544,"y":1770,"w":211,"h":327},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":6,"w":211,"h":327},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_14.png":
+{
+	"frame": {"x":484,"y":698,"w":227,"h":331},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":1,"w":227,"h":331},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_15.png":
+{
+	"frame": {"x":520,"y":2453,"w":243,"h":328},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":0,"w":243,"h":328},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_16.png":
+{
+	"frame": {"x":698,"y":2099,"w":249,"h":325},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":1,"w":249,"h":325},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_17.png":
+{
+	"frame": {"x":1719,"y":643,"w":250,"h":319},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":7,"w":250,"h":319},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_18.png":
+{
+	"frame": {"x":3380,"y":1,"w":258,"h":312},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":15,"w":258,"h":312},
+	"sourceSize": {"w":286,"h":337}
+},
+"Princess-Walk_19.png":
+{
+	"frame": {"x":3183,"y":1587,"w":268,"h":306},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":19,"w":268,"h":306},
+	"sourceSize": {"w":286,"h":337}
+}},
+"animations": {
+	"PrincessAttack": ["Princess-Attack_00.png","Princess-Attack_01.png","Princess-Attack_02.png","Princess-Attack_03.png","Princess-Attack_04.png","Princess-Attack_05.png","Princess-Attack_06.png","Princess-Attack_07.png","Princess-Attack_08.png","Princess-Attack_09.png","Princess-Attack_10.png","Princess-Attack_11.png","Princess-Attack_12.png","Princess-Attack_13.png"],
+	"PrincessAttack2": ["Princess-Attack2_00.png","Princess-Attack2_01.png","Princess-Attack2_02.png","Princess-Attack2_03.png","Princess-Attack2_04.png","Princess-Attack2_05.png","Princess-Attack2_06.png","Princess-Attack2_07.png","Princess-Attack2_08.png","Princess-Attack2_09.png","Princess-Attack2_10.png","Princess-Attack2_11.png","Princess-Attack2_12.png","Princess-Attack2_13.png"],
+	"PrincessDie": ["Princess-Die_00.png","Princess-Die_01.png","Princess-Die_02.png","Princess-Die_03.png","Princess-Die_04.png","Princess-Die_05.png","Princess-Die_06.png","Princess-Die_07.png","Princess-Die_08.png","Princess-Die_09.png","Princess-Die_10.png","Princess-Die_11.png","Princess-Die_12.png"],
+	"idle": ["Princess-Idle_00.png","Princess-Idle_01.png","Princess-Idle_02.png","Princess-Idle_03.png","Princess-Idle_04.png","Princess-Idle_05.png","Princess-Idle_06.png","Princess-Idle_07.png","Princess-Idle_08.png","Princess-Idle_09.png","Princess-Idle_10.png","Princess-Idle_11.png","Princess-Idle_12.png","Princess-Idle_13.png","Princess-Idle_14.png","Princess-Idle_15.png","Princess-Idle_16.png","Princess-Idle_17.png","Princess-Idle_18.png","Princess-Idle_19.png","Princess-Idle_20.png","Princess-Idle_21.png","Princess-Idle_22.png","Princess-Idle_23.png","Princess-Idle_24.png","Princess-Idle_25.png","Princess-Idle_26.png","Princess-Idle_27.png","Princess-Idle_28.png","Princess-Idle_29.png","Princess-Idle_30.png","Princess-Idle_31.png","Princess-Idle_32.png","Princess-Idle_33.png","Princess-Idle_34.png","Princess-Idle_35.png","Princess-Idle_36.png","Princess-Idle_37.png","Princess-Idle_38.png","Princess-Idle_39.png"],
+	"PrincessJump": ["Princess-Jump_00.png","Princess-Jump_01.png","Princess-Jump_02.png","Princess-Jump_03.png","Princess-Jump_04.png","Princess-Jump_05.png","Princess-Jump_06.png","Princess-Jump_07.png","Princess-Jump_08.png","Princess-Jump_09.png","Princess-Jump_10.png","Princess-Jump_11.png","Princess-Jump_12.png","Princess-Jump_13.png","Princess-Jump_14.png","Princess-Jump_15.png","Princess-Jump_16.png","Princess-Jump_17.png","Princess-Jump_18.png","Princess-Jump_19.png"],
+	"PrincessRun": ["Princess-Run_00.png","Princess-Run_01.png","Princess-Run_02.png","Princess-Run_03.png","Princess-Run_04.png","Princess-Run_05.png","Princess-Run_06.png","Princess-Run_07.png","Princess-Run_08.png","Princess-Run_09.png","Princess-Run_10.png","Princess-Run_11.png","Princess-Run_12.png","Princess-Run_13.png","Princess-Run_14.png","Princess-Run_15.png","Princess-Run_16.png","Princess-Run_17.png","Princess-Run_18.png","Princess-Run_19.png"],
+	"walk": ["Princess-Walk_00.png","Princess-Walk_01.png","Princess-Walk_02.png","Princess-Walk_03.png","Princess-Walk_04.png","Princess-Walk_05.png","Princess-Walk_06.png","Princess-Walk_07.png","Princess-Walk_08.png","Princess-Walk_09.png","Princess-Walk_10.png","Princess-Walk_11.png","Princess-Walk_12.png","Princess-Walk_13.png","Princess-Walk_14.png","Princess-Walk_15.png","Princess-Walk_16.png","Princess-Walk_17.png","Princess-Walk_18.png","Princess-Walk_19.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "prince.png",
+	"format": "RGBA8888",
+	"size": {"w":4081,"h":2881},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e655fc005db3b45113b8a3e15a985103:1b4fcbf6850fe16ded91dc110933fb06:c0a1401ac696fa68c01c94cb923316c3$"
+}
+}
