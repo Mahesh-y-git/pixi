@@ -11,76 +11,54 @@ export class GameScene extends Scene {
         super();
         this.app = app;
         this.assetLoader = new AssetLoader();
-        // No longer create own background - will use centralized one
+        this.background = new Background({ color: 0x000000 });
         this.characters = new CharacterManager(this.container);
-        this.usesCentralizedBackground = true;
     }
 
     preload(onComplete) {
         const assets = [
-            { name: 'character', url: 'assets/spritesheets/character.json' }
+            
+            { name: 'bg', url: 'assets/spritesheets/background.json' }
         ];
         this.assetLoader.loadAssets(assets, () => {
             this.onAssetsLoaded();
-            onComplete();
+            onComplete && onComplete();
         });
     }
 
     onAssetsLoaded() {
+        // Set up background
+        this.background.addTo(this.container);
+        this.background.resize(this.app.screen.width, this.app.screen.height);
+        
+        // Try to use background from spritesheet
+        const bgTex = this.assetLoader.getSpriteSheet('bg');
+        if (bgTex && bgTex.textures && Object.keys(bgTex.textures).length) {
+            const texKeys = Object.keys(bgTex.textures);
+            const t = bgTex.textures[texKeys[0]];
+            this.background.setTexture(t);
+        }
+
         const w = this.app.screen.width;
         const h = this.app.screen.height;
-        const groundLevel = h * 0.85; // Ground at 85% down the screen
-        
-        // Since we're using centralized background, just get the ground level from it
-        // The background is already set up in main.js
+        const groundLevel = h * 0.85;
 
-        const characterSpritesheet = this.assetLoader.getSpriteSheet('character');
-        
-        if (!characterSpritesheet) {
-            console.error('Character spritesheet not loaded!');
-            return;
-        }
-        
-        console.log('Character spritesheet loaded successfully:', characterSpritesheet);
-
-        // Create 3 characters on the ground with proper positioning
+        // Create characters using spritesheets
+        const characterSS = this.assetLoader.getSpriteSheet('character');
         const characterPositions = [
-            { 
-                x: w * 0.25, 
-                y: groundLevel, 
-                groundY: groundLevel,
-                direction: 'right',
-                scale: 1.0
-            },
-            { 
-                x: w * 0.5, 
-                y: groundLevel, 
-                groundY: groundLevel,
-                direction: 'left',
-                scale: 1.1
-            },
-            { 
-                x: w * 0.75, 
-                y: groundLevel, 
-                groundY: groundLevel,
-                direction: 'right',
-                scale: 0.9
-            }
+            { x: w * 0.25, y: groundLevel, groundY: groundLevel, direction: 'right', scale: 1.0 },
+            { x: w * 0.5, y: groundLevel, groundY: groundLevel, direction: 'left', scale: 1.1 },
+            { x: w * 0.75, y: groundLevel, groundY: groundLevel, direction: 'right', scale: 0.9 }
         ];
 
         characterPositions.forEach((pos, i) => {
             const id = `char-${i+1}`;
             const options = {
                 direction: pos.direction,
-                scale: pos.scale,
-                animationSpeeds: {
-                    idle: 0.08 + i * 0.02,
-                    walk: 0.12 + i * 0.02,
-                    run: 0.20 + i * 0.02
-                }
+                scale: pos.scale
             };
             
-            const character = this.characters.addCharacter(id, characterSpritesheet, pos, options);
+            const character = this.characters.addCharacter(id, characterSS, pos, options);
             
             // Add some personality with random idle behaviors
             this.setupCharacterBehaviors(character, i);
@@ -94,25 +72,7 @@ export class GameScene extends Scene {
             this.handleResize();
         });
         
-        console.log('GameScene loaded with centralized background management');
-    }
-    
-    // Called when centralized background changes
-    onBackgroundChanged(backgroundType) {
-        console.log(`GameScene received background change: ${backgroundType}`);
-        
-        // Adjust character behavior based on background
-        switch(backgroundType) {
-            case 'forest':
-                this.characters.setPropertyForAll('tint', 0xFFFFFF);
-                break;
-            case 'castle':
-                this.characters.setPropertyForAll('tint', 0xF0F0F0);
-                break;
-            case 'mountain':
-                this.characters.setPropertyForAll('tint', 0xE0E0E0);
-                break;
-        }
+        console.log('GameScene loaded with asset-based background');
     }
     
     setupCharacterBehaviors(character, index) {
@@ -153,7 +113,7 @@ export class GameScene extends Scene {
     
     handlePointerDown(event) {
         const pos = event.data.global;
-        const groundY = this.app.screen.height * 0.85; // Use fixed ground level since background is centralized
+        const groundY = this.background.getGroundLevel() || this.app.screen.height * 0.85;
         
         // Adjust click position to ground level
         const targetPosition = {
@@ -186,7 +146,7 @@ export class GameScene extends Scene {
         const chars = this.characters.getAllCharacters();
         if (chars.length === 0) return;
         
-        const groundY = this.app.screen.height * 0.85; // Use fixed ground level
+        const groundY = this.background.getGroundLevel() || this.app.screen.height * 0.85;
         const centerX = this.app.screen.width / 2;
         
         switch (event.key.toLowerCase()) {
@@ -227,9 +187,10 @@ export class GameScene extends Scene {
     handleResize() {
         const w = this.app.screen.width;
         const h = this.app.screen.height;
-        const newGroundLevel = h * 0.85;
         
-        // Background resize is handled by main.js centrally
+        this.background.resize(w, h);
+        const newGroundLevel = this.background.getGroundLevel() || h * 0.85;
+        
         this.characters.setGroundLevelForAll(newGroundLevel);
         this.characters.snapAllToGround();
     }
@@ -238,6 +199,9 @@ export class GameScene extends Scene {
         // Update characters with physics and animations
         this.characters.update(delta);
         
-        // Background is handled by main.js centrally, so we don't update it here
+        // Update background if it has parallax or animations
+        if (this.background.updateParallax) {
+            this.background.updateParallax(0);
+        }
     }
 }
