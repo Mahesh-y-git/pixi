@@ -18,10 +18,10 @@ export class CutsceneScene extends Scene {
 
     preload(onComplete) {
         const assets = [
-            { name: 'knight', url: 'src/assets/knight.json' },
-            { name: 'princess', url: 'src/assets/prince.json' },
-            { name: 'dragon', url: 'src/assets/Dragon.json' },
-            { name: 'bg', url: 'src/assets/background.json' }
+            { name: 'knight', url: 'assets/spritesheets/knight.json' },
+            { name: 'princess', url: 'assets/spritesheets/princess.json' },
+            { name: 'dragon', url: 'assets/spritesheets/dragon.json' },
+            { name: 'bg', url: 'assets/spritesheets/background.json' }
         ];
         this.assetLoader.loadAssets(assets, () => {
             this.onAssetsLoaded();
