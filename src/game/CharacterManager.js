@@ -14,12 +14,19 @@ export class CharacterManager {
             this.removeCharacter(id);
         }
 
-        // Create new character
-        const character = new Character(spritesheet, startPosition);
+        // Ensure position has ground level
+        const position = {
+            x: startPosition.x,
+            y: startPosition.y,
+            groundY: startPosition.groundY || startPosition.y
+        };
+
+        // Create new character with enhanced options
+        const character = new Character(spritesheet, position, options);
         character.id = id;
 
-        // Apply additional options
-        if (options.scale) {
+        // Apply legacy options for backward compatibility
+        if (options.scale && !options.scale) {
             character.sprite.scale.set(options.scale.x || options.scale, options.scale.y || options.scale);
         }
         if (options.tint !== undefined) {
@@ -31,16 +38,13 @@ export class CharacterManager {
         if (options.rotation !== undefined) {
             character.sprite.rotation = options.rotation;
         }
-        if (options.animationSpeed !== undefined) {
-            character.sprite.animationSpeed = options.animationSpeed;
-        }
 
         // Add to container and tracking arrays
         character.addToScene(this.container);
         this.characters.push(character);
         this.charactersById.set(id, character);
 
-        console.log(`Character '${id}' added to CharacterManager`);
+        console.log(`Character '${id}' added to CharacterManager at position (${position.x}, ${position.y}) with ground at ${position.groundY}`);
         return character;
     }
 
@@ -188,24 +192,72 @@ export class CharacterManager {
         });
     }
 
+    // Ground level management
+    setGroundLevelForAll(groundY) {
+        this.characters.forEach(character => {
+            character.setGroundLevel(groundY);
+        });
+    }
+    
+    snapAllToGround() {
+        this.characters.forEach(character => {
+            character.snapToGround();
+        });
+    }
+
+    // Enhanced movement commands
+    moveAllTo(positions, animationType = 'walk') {
+        if (!Array.isArray(positions)) {
+            // Single position for all characters
+            this.characters.forEach(character => {
+                character.moveTo(positions, null, animationType);
+            });
+        } else {
+            // Individual positions
+            this.characters.forEach((character, index) => {
+                if (index < positions.length) {
+                    character.moveTo(positions[index], null, animationType);
+                }
+            });
+        }
+    }
+
+    // Direction control
+    setDirectionForAll(direction) {
+        this.characters.forEach(character => {
+            character.setDirection(direction);
+        });
+    }
+    
+    makeAllLookAt(targetPosition) {
+        this.characters.forEach(character => {
+            character.lookAt(targetPosition);
+        });
+    }
+
     // Character formation/grouping
-    arrangeInLine(startPos, endPos, spacing = 50) {
+    arrangeInLine(startPos, endPos, animationType = 'walk', stagger = 0.1) {
         const count = this.characters.length;
         if (count === 0) return;
 
         const deltaX = (endPos.x - startPos.x) / Math.max(count - 1, 1);
-        const deltaY = (endPos.y - startPos.y) / Math.max(count - 1, 1);
+        const deltaY = (endPos.groundY || endPos.y || startPos.groundY || startPos.y);
 
         this.characters.forEach((character, index) => {
             const targetPos = {
                 x: startPos.x + deltaX * index,
-                y: startPos.y + deltaY * index
+                y: startPos.y,
+                groundY: deltaY
             };
-            character.moveTo(targetPos, 1);
+            
+            // Stagger the movement for more natural look
+            setTimeout(() => {
+                character.moveTo(targetPos, null, animationType);
+            }, stagger * index * 1000);
         });
     }
 
-    arrangeInCircle(center, radius) {
+    arrangeInCircle(center, radius, animationType = 'walk', stagger = 0.1) {
         const count = this.characters.length;
         if (count === 0) return;
 
@@ -215,10 +267,83 @@ export class CharacterManager {
             const angle = angleStep * index;
             const targetPos = {
                 x: center.x + Math.cos(angle) * radius,
-                y: center.y + Math.sin(angle) * radius
+                y: center.y + Math.sin(angle) * radius,
+                groundY: center.groundY || center.y
             };
-            character.moveTo(targetPos, 1);
+            
+            setTimeout(() => {
+                character.moveTo(targetPos, null, animationType);
+            }, stagger * index * 1000);
         });
+    }
+    
+    // Formation marching
+    marchInFormation(targetPosition, formation = 'line', animationType = 'walk') {
+        const positions = this.calculateFormationPositions(targetPosition, formation);
+        
+        this.characters.forEach((character, index) => {
+            if (index < positions.length) {
+                character.moveTo(positions[index], null, animationType);
+            }
+        });
+    }
+    
+    calculateFormationPositions(center, formation) {
+        const count = this.characters.length;
+        const positions = [];
+        
+        switch (formation) {
+            case 'line':
+                const spacing = 60;
+                const startX = center.x - ((count - 1) * spacing) / 2;
+                for (let i = 0; i < count; i++) {
+                    positions.push({
+                        x: startX + i * spacing,
+                        y: center.y,
+                        groundY: center.groundY || center.y
+                    });
+                }
+                break;
+                
+            case 'column':
+                const columnSpacing = 80;
+                for (let i = 0; i < count; i++) {
+                    positions.push({
+                        x: center.x,
+                        y: center.y + i * columnSpacing,
+                        groundY: center.groundY || center.y + i * columnSpacing
+                    });
+                }
+                break;
+                
+            case 'wedge':
+                const wedgeSpacing = 50;
+                for (let i = 0; i < count; i++) {
+                    const row = Math.floor(i / 2);
+                    const side = i % 2 === 0 ? -1 : 1;
+                    positions.push({
+                        x: center.x + (side * row * wedgeSpacing),
+                        y: center.y + row * wedgeSpacing,
+                        groundY: center.groundY || center.y
+                    });
+                }
+                break;
+                
+            default:
+                // Default to circle
+                const radius = 50 + count * 5;
+                const angleStep = (2 * Math.PI) / count;
+                for (let i = 0; i < count; i++) {
+                    const angle = angleStep * i;
+                    positions.push({
+                        x: center.x + Math.cos(angle) * radius,
+                        y: center.y + Math.sin(angle) * radius,
+                        groundY: center.groundY || center.y
+                    });
+                }
+        }
+        
+        return positions;
     }
 
     // Cleanup
