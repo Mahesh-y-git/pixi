@@ -31,6 +31,12 @@ export class AssetLoader {
                         this.loadedAssets.set(asset.name, spritesheet);
                         console.log(`Loaded spritesheet: ${asset.name}`);
                         return spritesheet;
+                    }).catch(error => {
+                        console.warn(`Failed to load spritesheet ${asset.name}: ${error.message}`);
+                        // Create a placeholder spritesheet with colored rectangles
+                        const placeholderSpritesheet = this.createPlaceholderSpritesheet(asset.name);
+                        this.loadedAssets.set(asset.name, placeholderSpritesheet);
+                        return placeholderSpritesheet;
                     });
                     promises.push(promise);
                 } else if (asset.url.match(/\.(png|jpg|jpeg|webp|svg)$/i)) {
@@ -138,6 +144,55 @@ export class AssetLoader {
 
     getLoadedAssets() {
         return Array.from(this.loadedAssets.keys());
+    }
+
+    // Create placeholder spritesheets for missing assets
+    createPlaceholderSpritesheet(name) {
+        // Create a simple colored rectangle texture
+        const canvas = document.createElement('canvas');
+        canvas.width = 64;
+        canvas.height = 64;
+        const ctx = canvas.getContext('2d');
+        
+        // Different colors for different character types
+        const colors = {
+            'knight': '#4A90E2',
+            'princess': '#F5A623',
+            'dragon': '#D0021B',
+            'character': '#7ED321',
+            'bg': '#9013FE'
+        };
+        
+        const color = colors[name] || '#50E3C2';
+        ctx.fillStyle = color;
+        ctx.fillRect(0, 0, 64, 64);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(name.toUpperCase(), 32, 35);
+        
+        const texture = PIXI.Texture.from(canvas);
+        
+        // Create a mock spritesheet structure
+        const mockSpritesheet = {
+            textures: {
+                [`${name}_placeholder`]: texture
+            },
+            animations: {
+                idle: [texture],
+                walk: [texture],
+                run: [texture],
+                attack: [texture],
+                roar: [texture],
+                jump: [texture],
+                hurt: [texture],
+                die: [texture]
+            },
+            baseTexture: texture.baseTexture
+        };
+        
+        console.log(`Created placeholder spritesheet for: ${name}`);
+        return mockSpritesheet;
     }
 
     // Preload multiple assets in batches to avoid overwhelming the browser
