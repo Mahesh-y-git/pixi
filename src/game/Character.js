@@ -28,6 +28,23 @@ export class Character {
 		
 		// Initialize sprite with idle animation
 		const idleTex = (this.spritesheet && this.spritesheet.animations && this.spritesheet.animations.idle) || [];
+		
+		if (idleTex.length === 0) {
+			console.warn('No idle animation found in spritesheet, using placeholder');
+			// Create a simple placeholder texture if no animations are available
+			const canvas = document.createElement('canvas');
+			canvas.width = 64;
+			canvas.height = 64;
+			const ctx = canvas.getContext('2d');
+			ctx.fillStyle = '#7ED321';
+			ctx.fillRect(0, 0, 64, 64);
+			ctx.fillStyle = '#FFFFFF';
+			ctx.font = '12px Arial';
+			ctx.textAlign = 'center';
+			ctx.fillText('CHAR', 32, 35);
+			idleTex.push(PIXI.Texture.from(canvas));
+		}
+		
 		this.sprite = new PIXI.AnimatedSprite(idleTex);
 		this.sprite.anchor.set(0.5, 1); // Anchor at bottom center for ground positioning
 		this.sprite.position.set(startPosition.x, this.groundY);
