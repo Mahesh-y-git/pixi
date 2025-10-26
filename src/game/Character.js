@@ -38,7 +38,7 @@ export class Character {
 			this.sprite = this.createSimpleCharacterGraphic(options);
 		}
 		
-		this.sprite.anchor.set(0.5, 1); // Anchor at bottom center for ground positioning
+	//	this.sprite.anchor.set(0.5, 1); // Anchor at bottom center for ground positioning
 		this.sprite.position.set(startPosition.x, this.groundY);
 		
 		// Character properties
@@ -364,7 +364,7 @@ export class Character {
 		// Calculate bubble position (above character's head)
 		const bubblePosition = {
 			x: this.sprite.x,
-			y: this.sprite.y - (this.sprite.height * 0.8) // Position above character
+			y: this.sprite.y  // Position above character
 		};
 		
 		this._bubble.show(text, bubblePosition, duration);

@@ -18,7 +18,7 @@ export class GameScene extends Scene {
     preload(onComplete) {
         const assets = [
             
-            { name: 'bg', url: 'assets/spritesheets/background.json' }
+            { name: 'bg', url: 'src/assets/background.json' }
         ];
         this.assetLoader.loadAssets(assets, () => {
             this.onAssetsLoaded();
@@ -32,13 +32,6 @@ export class GameScene extends Scene {
         this.background.resize(this.app.screen.width, this.app.screen.height);
         
         // Try to use background from spritesheet
-        const bgTex = this.assetLoader.getSpriteSheet('bg');
-        if (bgTex && bgTex.textures && Object.keys(bgTex.textures).length) {
-            const texKeys = Object.keys(bgTex.textures);
-            const t = bgTex.textures[texKeys[0]];
-            this.background.setTexture(t);
-        }
-
         const w = this.app.screen.width;
         const h = this.app.screen.height;
         const groundLevel = h * 0.85;

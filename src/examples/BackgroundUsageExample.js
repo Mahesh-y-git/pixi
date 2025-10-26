@@ -37,7 +37,7 @@ export class DynamicBackground extends PIXI.Container {
 
         this.assetLoader = new AssetLoader();
         this.background = new Background();
-        this.addChild(this.background);
+        this.addChild(this.background.container);
 
         this.spritesheet = null;
     }
@@ -46,7 +46,7 @@ export class DynamicBackground extends PIXI.Container {
      * Loads the background assets and builds the scene.
      * @returns {Promise<void>} A promise that resolves when the background is ready.
      */
-    async load() {
+     load() {
         return new Promise((resolve) => {
             this.assetLoader.loadAssets([{ name: 'dynamic_bg', url: this.options.assetUrl }], () => {
                 this.onAssetsLoaded();
@@ -78,20 +78,44 @@ export class DynamicBackground extends PIXI.Container {
         // 5. Add foreground elements for a sense of depth
         this.addForegroundElements();
 
+        this.loadGroundLayer();
         // Resize to fit the screen
         this.background.resize(this.screenWidth, this.screenHeight);
         this.background.setGroundLevel(this.groundLevel);
     }
 
-    setupMainBackground() {
-        // Use a texture named 'sky' or 'main_bg' or the first one as the main background
-        const mainBgTexture = this.spritesheet.textures['sky'] || this.spritesheet.textures['main_bg'] || Object.values(this.spritesheet.textures)[0];
+   setupMainBackground() {
+    // Choose a suitable texture from the spritesheet
+    const mainBgTexture =
+        this.spritesheet.textures['sky'] ||
+        this.spritesheet.textures['main_bg'] ||
+        Object.values(this.spritesheet.textures)[0];
+        console.log( Object.values(this.spritesheet.textures)[0])
+
+    // Create the background container (once)
+    if (!this.background) {
+        this.background = new PIXI.Sprite(mainBgTexture || PIXI.Texture.WHITE);
+        this.background.anchor.set(0.5);
+        this.background.x = this.screenWidth / 2;
+        this.background.y = this.screenHeight / 2;
+
+        // Fit the background to the screen
+        this.background.width = this.screenWidth;
+        this.background.height = this.screenHeight;
+
+        // Add it to your main container
+        this.container.addChild(this.background);
+    } else {
+        // Just update texture if it already exists
         if (mainBgTexture) {
-            this.background.setTexture(mainBgTexture);
+           // this.background.texture = mainBgTexture;
         } else {
-            this.background.setGradient(0x87CEEB, 0xE0F6FF); // Fallback gradient
+            // Optional: fallback gradient if no texture found
+            this.setGradientBackground(0x87CEEB, 0xE0F6FF);
         }
     }
+}
+
 
     addParallaxLayers() {
         // Look for textures with 'parallax', 'cloud', or 'mountain' in their name
@@ -139,7 +163,7 @@ export class DynamicBackground extends PIXI.Container {
         cloudTextures.forEach((texture, i) => {
             const cloud = new PIXI.Sprite(texture);
             cloud.anchor.set(0.5);
-            cloud.scale.set(0.5 + Math.random() * 0.5);
+            cloud.scale.set(0.5 + Math.random() * 0.2);
             cloud.alpha = 0.7 + Math.random() * 0.3;
             cloud.position.set(Math.random() * this.screenWidth, this.screenHeight * (0.1 + Math.random() * 0.2));
             this.addChild(cloud);
@@ -233,6 +257,37 @@ export class DynamicBackground extends PIXI.Container {
         cloud.endFill();
         return cloud;
     }
+     loadGroundLayer(groundAssetUrl = 'src/assets/grass.json') {
+    return new Promise((resolve) => {
+        const loader = new AssetLoader();
+        loader.loadAssets([{ name: 'ground', url: groundAssetUrl }], () => {
+            const groundSheet = loader.getSpriteSheet('ground');
+            if (!groundSheet || !groundSheet.textures) {
+                console.warn('Ground spritesheet not found, skipping ground layer.');
+                resolve();
+                return;
+            }
+
+            // Pick all textures from the ground spritesheet
+            const textures = Object.values(groundSheet.textures);
+
+            // Tile them across the screen width
+            const tileWidth = textures[0].width || 32;
+            const numTiles = Math.ceil(this.screenWidth / tileWidth) + 1;
+
+            for (let i = 0; i < numTiles; i++) {
+                const texture = textures[i % textures.length];
+                const tile = new PIXI.Sprite(texture);
+                tile.anchor.set(0.5, 1); // bottom-center
+                tile.position.set(i * tileWidth, this.groundLevel);
+                this.addChild(tile);
+            }
+
+            resolve();
+        });
+    });
+}
+
 
     update(delta) {
         // This method can be called from the main game loop to update animations.

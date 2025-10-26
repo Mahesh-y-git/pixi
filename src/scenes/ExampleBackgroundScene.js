@@ -5,7 +5,7 @@ import { AssetLoader } from '../utils/AssetLoader';
 import { Background } from '../components/Background';
 import { CharacterManager } from '../game/CharacterManager';
 
-export class BackgroundScene extends Scene {
+export class ExampleBackgroundScene extends Scene {
     constructor(app) {
         super();
         this.app = app;
@@ -16,8 +16,7 @@ export class BackgroundScene extends Scene {
 
     preload(onComplete) {
         const assets = [
-            { name: 'bg', url: 'src/assets/background.json' },
-            { name: 'character', url: 'src/assets/spritesheets/character.json' }
+            { name: 'bg', url: 'src/assets/background.json' }
         ];
         
         this.assetLoader.loadAssets(assets, () => {
@@ -39,7 +38,7 @@ export class BackgroundScene extends Scene {
         // 2. Use a specific background texture from the JSON
         if (bgSpritesheet && bgSpritesheet.textures) {
             // Available backgrounds from background.json: castle_bg, forest_bg, mountain_bg
-            const castleTexture = bgSpritesheet.textures['castleSmallAlt'];
+            const castleTexture = bgSpritesheet.textures['cloud1'];
             
             if (castleTexture) {
                 this.background.setTexture(castleTexture);
@@ -63,24 +62,19 @@ export class BackgroundScene extends Scene {
         this.addBackgroundDecorations(bgSpritesheet, w, h, groundLevel);
         
         // Method 2: Creating simple graphic elements
-        this.addSimpleBackgroundItems(w, h, groundLevel);
+      //  this.addSimpleBackgroundItems(w, h, groundLevel);
         
         // Method 3: Adding parallax layers for depth
-        this.addParallaxLayers(bgSpritesheet, w, h);
+      //  this.addParallaxLayers(bgSpritesheet, w, h);
         
         // Method 4: Adding foreground elements
-        this.addForegroundElements(w, h, groundLevel);
+       // this.addForegroundElements(w, h, groundLevel);
         
         // Method 5: Adding animated background elements
-        this.addAnimatedBackgroundItems(w, h, groundLevel);
+      //  this.addAnimatedBackgroundItems(w, h, groundLevel);
 
         // Add a character for reference
-        const characterSS = this.assetLoader.getSpriteSheet('character');
-        this.characters.addCharacter('hero', characterSS, { 
-            x: w * 0.5, 
-            y: groundLevel, 
-            groundY: groundLevel 
-        });
+        
 
         // Setup interactions
         this.setupInteractions(w, h, groundLevel);
